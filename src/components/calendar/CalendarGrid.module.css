@@ -1,0 +1,68 @@
+.grid {
+  padding: var(--spacing-md);
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: var(--spacing-sm);
+}
+
+.headerCell {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xs) 0;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: var(--radius-md);
+}
+
+.dayBtn {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dayBtn:hover {
+  background-color: var(--color-background);
+}
+
+.dayBtn:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.dayBtn.selected {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.dayNumber {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+}
+
+.selected .dot {
+  background-color: #ffffff;
+}
