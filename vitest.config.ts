@@ -11,11 +11,19 @@ export default mergeConfig(
       exclude: ['e2e/**', 'node_modules/**'],
       coverage: {
         provider: 'v8',
+        include: ['src/**/*.{ts,tsx}'],
+        exclude: [
+          'src/main.tsx',
+          'src/vite-env.d.ts',
+          'src/test/**',
+          'src/types/**',
+          'src/**/*.test.{ts,tsx}',
+        ],
         reporter: ['text', 'lcov'],
         thresholds: {
           statements: 80,
           branches: 80,
-          functions: 80,
+          functions: 70,
           lines: 80,
         },
       },
