@@ -1,15 +1,22 @@
-import { describe, it, expect, vi, beforeAll, beforeEach } from 'vitest';
+import {
+  describe,
+  it,
+  expect,
+  vi,
+  beforeAll,
+  beforeEach,
+} from 'vite-plus/test';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { TaskModal } from './TaskModal';
 import type { Task } from '../../types/task';
 
 beforeAll(() => {
-  HTMLDialogElement.prototype.showModal = vi.fn(function (
-    this: HTMLDialogElement,
-  ) {
-    this.setAttribute('open', '');
-  });
+  HTMLDialogElement.prototype.showModal = vi.fn(
+    function (this: HTMLDialogElement) {
+      this.setAttribute('open', '');
+    },
+  );
   HTMLDialogElement.prototype.close = vi.fn(function (this: HTMLDialogElement) {
     this.removeAttribute('open');
   });

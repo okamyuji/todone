@@ -1,6 +1,4 @@
 title = "toDone gitleaks config"
 
 [allowlist]
-  paths = [
-    '''.env''',
-  ]
+paths = ['''.env''']

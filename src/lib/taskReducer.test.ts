@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vite-plus/test';
 import { taskReducer } from './taskReducer';
 import type { Task, TaskAction } from '../types/task';
 
