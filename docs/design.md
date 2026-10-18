@@ -174,12 +174,7 @@ toDone
 type TaskId = string;
 
 type Category =
-  | 'work'
-  | 'shopping'
-  | 'study'
-  | 'health'
-  | 'housework'
-  | 'other';
+  'work' | 'shopping' | 'study' | 'health' | 'housework' | 'other';
 
 type Priority = 'high' | 'medium' | 'low';
 
