@@ -20,3 +20,25 @@ updates:
           - vitest
           - '@vitest/*'
           - '@voidzero-dev/*'
+      # react と react-dom は版が完全に一致しないと起動しない
+      react:
+        patterns:
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
+      # applies-to を省いた group は版更新にしか効かないので、脆弱性対応の PR にも同じまとまりを定義する
+      vite-plus-security:
+        applies-to: security-updates
+        patterns:
+          - vite-plus
+          - vitest
+          - '@vitest/*'
+          - '@voidzero-dev/*'
+      react-security:
+        applies-to: security-updates
+        patterns:
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
