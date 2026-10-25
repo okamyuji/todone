@@ -20,3 +20,10 @@ updates:
           - vitest
           - '@vitest/*'
           - '@voidzero-dev/*'
+      # react と react-dom は版が完全に一致しないと起動しない
+      react:
+        patterns:
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
