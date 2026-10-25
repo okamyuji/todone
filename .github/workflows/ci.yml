@@ -14,8 +14,6 @@ jobs:
   quality:
     uses: okamyuji/reusable-workflows/.github/workflows/node-ci.yml@v1
     with:
-      # Node 24 (npm 11)。npm 10ではvitestエイリアス(npm:@voidzero-dev/vite-plus-test@latest)の
-      # dist-tag検証でnpm ciが失敗する（mainが2026-06-21から落ちていた実原因）
       node-version: '24'
       lint-command: 'exec -- vp check'
       test-command: 'run test:coverage'
@@ -30,18 +28,20 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: npx vp build
+        run: pnpm exec vp build
 
       - name: Install Playwright
-        run: npx playwright install --with-deps chromium
+        run: pnpm exec playwright install --with-deps chromium
 
       - name: E2E tests
-        run: npx playwright test
+        run: pnpm exec playwright test
