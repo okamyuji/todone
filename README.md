@@ -31,28 +31,28 @@
 ## セットアップ
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 開発サーバーが`http://localhost:6001`で起動する。
 
 ## コマンド一覧
 
-| コマンド                | 説明                                   |
-| ----------------------- | -------------------------------------- |
-| `npm run dev`           | 開発サーバー起動（ポート6001）         |
-| `npm run build`         | 型チェック + 本番ビルド                |
-| `npm run preview`       | ビルド成果物のプレビュー（ポート4173） |
-| `npm run lint`          | ESLint実行                             |
-| `npm run format`        | Prettierでフォーマット                 |
-| `npm run format:check`  | フォーマットチェック（CIで使用）       |
-| `npm run typecheck`     | TypeScript型チェック                   |
-| `npm run test`          | ユニットテスト実行                     |
-| `npm run test:watch`    | テストのウォッチモード                 |
-| `npm run test:coverage` | カバレッジ付きテスト                   |
-| `npm run e2e`           | Playwright E2Eテスト                   |
-| `npm run e2e:ui`        | Playwright UIモード                    |
+| コマンド                 | 説明                                   |
+| ------------------------ | -------------------------------------- |
+| `pnpm run dev`           | 開発サーバー起動（ポート6001）         |
+| `pnpm run build`         | 型チェック + 本番ビルド                |
+| `pnpm run preview`       | ビルド成果物のプレビュー（ポート4173） |
+| `pnpm run lint`          | Oxlint実行（vp lint）                  |
+| `pnpm run format`        | Oxfmtでフォーマット（vp fmt）          |
+| `pnpm run format:check`  | フォーマットチェック（CIで使用）       |
+| `pnpm run typecheck`     | TypeScript型チェック                   |
+| `pnpm run test`          | ユニットテスト実行                     |
+| `pnpm run test:watch`    | テストのウォッチモード                 |
+| `pnpm run test:coverage` | カバレッジ付きテスト                   |
+| `pnpm run e2e`           | Playwright E2Eテスト                   |
+| `pnpm run e2e:ui`        | Playwright UIモード                    |
 
 ## ディレクトリ構成
 
