@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      # vite-plus は vite の別名と vitest を同じ版に揃える前提なので、関係する版を1つの PR にまとめる
+      vite-plus:
+        patterns:
+          - vite-plus
+          - vitest
+          - '@vitest/*'
+          - '@voidzero-dev/*'
