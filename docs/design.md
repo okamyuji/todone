@@ -498,8 +498,6 @@ todone/
 │   └── vite-env.d.ts
 ├── .env
 ├── .gitignore
-├── .prettierrc
-├── eslint.config.js
 ├── index.html
 ├── package.json
 ├── playwright.config.ts
@@ -548,8 +546,8 @@ function useTaskStore() {
 **ローカル（pre-commit 相当）**:
 
 ```bash
-prettier --check .
-eslint .
+vp fmt --check .
+vp lint .
 tsc --noEmit
 vitest run --coverage
 playwright test
@@ -562,8 +560,8 @@ gitleaks detect --source .
 jobs:
   quality:
     steps:
-      - prettier --check .
-      - eslint .
+      - vp fmt --check .
+      - vp lint .
       - tsc --noEmit
       - vitest run --coverage
       - vite build

@@ -10,5 +10,3 @@ peerDependencyRules:
   allowedVersions:
     vite: '1'
 minimumReleaseAgeExclude:
-  - minimatch@11.0.3
-  - '@isaacs/nonrecursive-glob-match@1.0.3'
