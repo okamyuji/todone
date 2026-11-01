@@ -5,13 +5,13 @@ updates:
     schedule:
       interval: weekly
     cooldown:
-      default-days: 7
+      default-days: 3
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
     cooldown:
-      default-days: 7
+      default-days: 3
     groups:
       # vite-plus は vite の別名と vitest を同じ版に揃える前提なので、関係する版を1つの PR にまとめる
       vite-plus:
