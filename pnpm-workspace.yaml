@@ -1,6 +1,7 @@
 # 公開から3日未満の版を入れない。依存の乗っ取りへの備え。緊急時だけ minimumReleaseAgeExclude に name@version で1版ずつ足す
 minimumReleaseAge: 4320
 overrides:
+  # vite-plus と同じ版にする。Dependabot はこの行を更新しないので、vite-plus を上げる PR で手で揃える
   vite: npm:@voidzero-dev/vite-plus-core@1.5.0
   vitest: 5.1.0
   undici: ^7.29.0
