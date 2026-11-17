@@ -2,7 +2,7 @@
 minimumReleaseAge: 4320
 overrides:
   # vite-plus と同じ版にする。Dependabot はこの行を更新しないので、vite-plus を上げる PR で手で揃える
-  vite: npm:@voidzero-dev/vite-plus-core@1.5.0
+  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
   vitest: 5.1.0
   undici: ^7.29.0
   'minimatch@>=10.0.0 <11.0.1': ^11.0.3
