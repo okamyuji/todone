@@ -12,17 +12,15 @@ updates:
       interval: weekly
     cooldown:
       default-days: 3
-    # vite-plus が同梱する vitest と版が違うと vp test が起動しない。vite-plus を上げる PR で手で揃える
+    # vite-plus が同梱する vitest と版が違うと vp test --coverage が失敗する。vite-plus を上げる PR で手で揃える
     ignore:
       - dependency-name: vitest
       - dependency-name: '@vitest/*'
     groups:
-      # vite-plus は vite の別名と vitest を同じ版に揃える前提なので、関係する版を1つの PR にまとめる
+      # vite-plus は vite の別名と同じ版に揃える前提なので、関係する版を1つの PR にまとめる
       vite-plus:
         patterns:
           - vite-plus
-          - vitest
-          - '@vitest/*'
           - '@voidzero-dev/*'
       # react と react-dom は版が完全に一致しないと起動しない
       react:
@@ -36,8 +34,6 @@ updates:
         applies-to: security-updates
         patterns:
           - vite-plus
-          - vitest
-          - '@vitest/*'
           - '@voidzero-dev/*'
       react-security:
         applies-to: security-updates
